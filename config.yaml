@@ -1,0 +1,44 @@
+data:
+  train_fasta: "dataset/random_split/train.fasta"
+  valid_fasta: "dataset/random_split/valid.fasta"
+  window_size: 0
+  num_workers: 0
+  esmc_model: "esmc_600m"
+  # esmc_weights_dir: "esmc"  # uncomment for offline servers; weight file must be at <dir>/data/weights/esmc_600m_2024_12_v0.pth
+
+lora:
+  enable: true
+  rank: 8
+  alpha:  16
+  dropout: 0.25
+  bias: "none"
+  target_modules:
+    - "layernorm_qkv.1"
+    - "out_proj"
+  target_blocks: [30, 31, 32, 33, 34, 35]
+
+model:
+  protein_dim: 1152
+  local_dim: 1152
+  hidden_dim: 128
+  n_layers: 1
+  n_heads: 4
+  pf_dim: 256
+  dropout: 0.25
+  kernel_size: 7
+
+training:
+  batch_size: 16
+  learning_rate: 0.0001
+  lora_learning_rate: 0.0001
+  weight_decay: 0.0001
+  max_epochs: 100
+  early_stopping: 10
+  decay_interval: 10
+  lr_decay: 0.9
+  seed: 42
+
+paths:
+  output_dir: "outputs/"
+  model_dir: "ckpt/"
+  result_dir: "results/"
