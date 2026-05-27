@@ -8,7 +8,7 @@ A deep learning model for predicting covalent cysteine sites in proteins. CCSite
 - **Contextual Pattern Encoding**: 1D convolutional encoder with GLU activation and residual connections
 - **Cysteine-specific Decoding**: Transformer decoder with cross-attention between the target cysteine and the full protein
 - **Covalent Ligandability Scoring**: 3-layer MLP (128 → 256 → 32 → 2) 
-## Requirements
+## Installation
 
 ```
 # Python
