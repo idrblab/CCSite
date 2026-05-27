@@ -1,13 +1,13 @@
 # CCSite
 
-A deep learning model for predicting covalent cysteine sites in proteins. CCSite fine-tunes ESM Cambrian via LoRA and combines it with a cysteine-centered local-global attention network to classify each cysteine residue as covalently reactive or not.
+CCSite is a deep learning framework for identifying covalently ligandable cysteines directly from protein sequences.
 
 ## Model Architecture
 
-- **Adapted Sequence Embedding**: ESM C-600M (frozen) with LoRA adapters on the last 6 attention blocks
-- **Contextual Pattern Encoding**: 1D convolutional encoder with GLU activation and residual connections
-- **Cysteine-specific Decoding**: Transformer decoder with cross-attention between the target cysteine and the full protein
-- **Covalent Ligandability Scoring**: 3-layer MLP (128 → 256 → 32 → 2) 
+- **Adapted Sequence Embedding**: ESM C-600M is used to generate residue-level representations. The backbone is frozen, while LoRA adapters are applied to the last 6 transformer layers.
+- **Contextual Pattern Encoding**: A 1D convolutional encoder with GLU activation refines residue representations and captures local sequence patterns.
+- **Cysteine-specific Decoding**: A cysteine-centered decoder uses self-attention and cross-attention to model interactions between the candidate cysteine and the full protein sequence.
+- **Covalent Ligandability Scoring**: A three-layer MLP classifier outputs the probability that the candidate cysteine is covalently ligandable.
 ## Installation
 
 ```
