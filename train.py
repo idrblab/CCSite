@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Complete training script for covalent cysteine-site predictor.
+Training script for covalent cysteine site prediction.
 
 This script handles:
 - Data loading and preprocessing
