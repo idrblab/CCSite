@@ -1,5 +1,5 @@
 """
-Main model architecture for covalent cysteine-site prediction.
+Main model architecture for covalent cysteine site prediction.
 
 This module contains the core neural network components including:
 - SelfAttention: Multi-head attention mechanism
