@@ -76,8 +76,8 @@ CCSite/
 ├── config.yaml       # Configuration file
 ├── environment.yml   # Conda environment
 ├── dataset/
-│   ├── all.fasta     # Full dataset (all proteins)
-│   ├── random_split/ # Random train/valid/test split
+│   ├── all.fasta     # Full dataset
+│   ├── random_split/ # One representative random split (train/validation/test 8:1:1)
 │   └── five-fold_cross-validation_split/  # 5-fold CV splits (5 repeats)
 ├── example/          # Example input/output
 ├── ckpt/             # Model checkpoints
