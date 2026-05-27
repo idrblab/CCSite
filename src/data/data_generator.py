@@ -1,4 +1,4 @@
-"""Data generator for cysteine-reactivity prediction.
+"""Data generator for covalent cysteine site prediction.
 
 Loads raw FASTA files and yields per-residue samples that are
 encoded on-the-fly with ESMC during training/testing. Only cysteine residues are
