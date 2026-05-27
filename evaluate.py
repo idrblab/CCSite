@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inference script for the covalent cysteine-site predictor.
+"""Inference script for covalent cysteine site prediction.
 
 Loads a trained checkpoint, runs inference on the configured test split,
 then persists ground-truth labels and prediction scores for downstream analysis.
