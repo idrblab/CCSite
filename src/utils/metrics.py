@@ -1,5 +1,5 @@
 """
-Evaluation metrics for covalent cysteine-site prediction.
+Evaluation metrics for covalent cysteine site prediction.
 """
 
 import numpy as np
