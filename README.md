@@ -35,9 +35,13 @@ CCSite uses [ESM C](https://github.com/Biohub/esm#esm-c-) to generate protein re
 
 **With internet access** — weights are downloaded and cached automatically from HuggingFace Hub on first run. No extra setup needed.
 
-**Without internet access (offline servers)** — download [ESMC-600M weights](https://huggingface.co/EvolutionaryScale/esmc-600m-2024-12) on a connected machine first:
+**Without internet access (offline servers)** — download the weight file on a connected machine first:
 
-Copy the downloaded directory to your server and place the weight file at: esmc/data/weights/esmc_600m_2024_12_v0.pth
+```
+https://huggingface.co/biohub/esmc-600m-2024-12/blob/main/data/weights/esmc_600m_2024_12_v0.pth
+```
+
+Copy it to your server and place it at: `esmc/data/weights/esmc_600m_2024_12_v0.pth`
 
 Then uncomment and set `esmc_weights_dir` in `config.yaml`:
 
