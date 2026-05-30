@@ -5,7 +5,7 @@ CCSite is a deep learning framework for identifying covalently ligandable cystei
 ## Model Architecture
 
 <p align="center">
-  <img src="CCSite.png">
+  <img src="CCSite.png" width="850">
 </p>
 
 - **Adapted Sequence Embedding**: ESM C-600M is used to generate residue-level representations. The backbone is frozen, while LoRA adapters are applied to the last 6 transformer layers.
