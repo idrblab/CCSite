@@ -4,6 +4,10 @@ CCSite is a deep learning framework for identifying covalently ligandable cystei
 
 ## Model Architecture
 
+<p align="center">
+  <img src="CCSite.tif">
+</p>
+
 - **Adapted Sequence Embedding**: ESM C-600M is used to generate residue-level representations. The backbone is frozen, while LoRA adapters are applied to the last 6 transformer layers.
 - **Contextual Pattern Encoding**: A 1D convolutional encoder with GLU activation refines residue representations and captures local sequence patterns.
 - **Cysteine-specific Decoding**: A cysteine-centered decoder uses self-attention and cross-attention to model interactions between the candidate cysteine and the full protein sequence.
